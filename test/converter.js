@@ -1,7 +1,8 @@
-var expect = require("chai").expect,
-  converter = require("../app/converter");
+// test/converter.js
 
-//describe/it from mocha
+var expect = require("chai").expect;
+var converter = require("../app/converter");
+
 describe("Color Code Converter", function () {
   describe("RGB to Hex conversion", function () {
     it("converts the basic colors", function () {
