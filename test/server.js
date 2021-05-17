@@ -16,7 +16,7 @@ describe("Color Code Converter API", function () {
 
     it("returns the color in hex", function (done) {
       request(url, function (error, response, body) {
-        expect(body).to.equal("ffffff");
+        expect(JSON.parse(body)).to.deep.equal({ hex: "ffffff" });
         done();
       });
     });
@@ -34,8 +34,8 @@ describe("Color Code Converter API", function () {
 
     it("returns the color in RGB", function (done) {
       request(url, function (error, response, body) {
-        expect(body).to.equal("[0,255,0]");
-        //expect(JSON.parse(body)).to.deep.equal({ rgb: [0, 255, 0] });
+        //expect(body).to.equal("[0,255,0]");
+        expect(JSON.parse(body)).to.deep.equal({ rgb: [0, 255, 0] });
         done();
       });
     });
